@@ -1,2 +1,24 @@
-# gitchat-webpack-for-multi-pages
-A guide for how to use webpack to build a business site.
+使用 Webpack 开发多页面站点
+========
+
+前言
+========
+
+1. 回顾以前静态网站的开发模式
+    1. 静态网页
+    2. Grunt 批处理
+    3. Gulp 批处理
+2. 使用 Gulp 的问题
+3. 本次的分享大纲
+
+面向读者
+--------
+
+
+
+名词及约定
+--------
+
+
+作者介绍
+--------
