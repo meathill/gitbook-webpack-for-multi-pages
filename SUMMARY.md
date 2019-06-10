@@ -2,7 +2,7 @@
 
 * [前言](README.md)
 * [切页面的历史](history.md)
-* [Webpack 配置基础](webpack-basic.md)
+* [Webpack 基础入门](webpack-basic.md)
 * [Webpack 多页配置](webpack-multiple-pages.md)
 * [Pug 介绍及架构](pug.md)
 * [使用 Pug 实现 i18n](pug-i18n.md)
