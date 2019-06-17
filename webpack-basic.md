@@ -33,6 +33,51 @@ Webpack 的设计思路
 
 如此一来，处理模块、资源就变得非常简单。使用第三方的库也很简单，直接引入，它里面的资源都由 Webpack 负责安排，开发者甚至感觉不到它们的存在。
 
+### Loader
+
+Webpack 核心概念之一，用于处理 JS 里导入的依赖。
+
+Loader 支持串联，比如，加载 Stylus 文件最终生成 CSS 的规则多半是这样的：
+
+```js
+module.exports = {
+  module: {
+    rules: [
+      {
+        test: /\.styl$/,
+        use: [
+          // style-loader
+          { loader: 'style-loader' },
+          // css-loader
+          {
+            loader: 'css-loader',
+            options: {
+              modules: true,
+            },
+          },
+          // stylus-loader
+          { loader: 'stylus-loader' },
+        ],
+      },
+    ],
+  },
+};
+```
+
+我们从下往上看：
+
+1. 加载 Stylus 文件，由 stylus-loader 负责，将其转化成 CSS
+2. css-loader 负责加载 css 内容
+3. style-loader 负责把 css 内容通过 `<style>` 标签插入页面。
+
+Loader 支持参数，具体哪个 loader 支持哪些参数大家可以看具体文档。Loader 还支持手工在 `import` 时串连，用处不大，我也就步介绍了。
+
+### 插件
+
+另一核心概念，可以做任何事情，不过本文里基本用来输出内容。
+
+基本思路是使用部署在各个环节的钩子，对内容进行处理。
+
 Webpack 的发展
 --------
 
