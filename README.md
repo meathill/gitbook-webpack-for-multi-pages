@@ -63,7 +63,7 @@
 * Node.js >= 12.4.0
 * Webpack >= 4.33.0
 * Webpack-cli >= 3.11.0
-* Bable >= 7
+* Babel >= 7
 
 作者介绍
 --------

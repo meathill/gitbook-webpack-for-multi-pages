@@ -172,5 +172,5 @@ msgstr ""`;
 3. 将其中要翻译的文案替换成 `__('文案')`
 4. 在项目目录运行 `node extract-texts` 或者 `npm run i18n:extract`
 5. 运行 `msgcat -o cn.po cn.po en.pot` 把新生成的未翻译文本与已翻译文本合并
-6. 使用 [POEditor](https://poeditor.com/) 翻译
+6. 使用 [POEdit](https://poedit.net/download) 翻译
 7. 运行 `TARGET_LANG=cn NODE_ENV=production webpack --config build/webpack.config.prod.js --mode=production` 生成指定语言版本
