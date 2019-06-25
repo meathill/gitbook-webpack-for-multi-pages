@@ -113,6 +113,8 @@ block content
 
 这里，`about.pug` 继承了 `template.pug`，并且向 `vars` 块插入两个变量；然后向 `content` 块里插入页面内容。如此一来，所有页面都可以继承同样的模板，可以大大降低维护成本。
 
+> 这里还有个注意事项：模板托管给用户自定义文件之后，html-webpack-plugin 的一些跟模板相关的配置就失效了，比如 `base`。
+
 图片及其它资源的处理
 --------
 
@@ -134,7 +136,7 @@ const timeline = require('../img/timeline.png');
 const html = '<img class="hidden-xs-down" src="' + timeline + '">';
 ```
 
-对于 Webpack 而言，需要专门的 loader 负责处理 png 等图形文件的引用，所以我们还要改一下 Webpack 的配置文件，加入下面几行：
+对于 Webpack 而言，需要专门的 file-loader 负责处理 png 等图形文件的引用，所以我们还要改一下 Webpack 的配置文件，加入下面几行：
 
 ```js
 module.exports = {

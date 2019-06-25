@@ -12,7 +12,7 @@ Webpack 配置多页开发
 HTML Webpack Plugin
 --------
 
-为了能够输出静态 HTML，我们要用到一个插件：[HTML Webpack Plugin](https://github.com/jantimon/html-webpack-plugin)。这是个官方插件，效果很好，维护比较充分，建议大家好好看看它的文档，我们接下来的操作基本都与它有关。
+为了能够输出静态 HTML，我们要用到一个插件：[HTML Webpack Plugin](https://github.com/jantimon/html-webpack-plugin)。这是个官方插件，效果很好，维护充分，建议大家好好看看它的文档，我们接下来的操作基本都与它有关。
 
 使用它的方式很简单：
 

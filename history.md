@@ -26,7 +26,7 @@ Gulp 能满足网站开发的各种需求，但不代表 Gulp 解决方案是完
 
 1. Gulp 需要开发者手动处理所有资源，成本较高
 2. Gulp 没有类似 webpack-dev-server 这样的核心组件，开发环境比较难搞
-3. Gulp 只是批处理，只能组织各种操作，它仍然需要用 webpack 处理 JS
+3. Gulp 只是批处理，只能组织各种操作，它仍然需要用 webpack 处理 JS。换言之，Webpack **“可能”**可以替代 Gulp，但 Gulp **“不可能”**替代 Webpack
 
 如果一个工作只用 webpack 就能完成，那么我似乎没有必要再用别的工具，比如 Gulp。何况 webpack 还有更好用的 dev-server。
 
