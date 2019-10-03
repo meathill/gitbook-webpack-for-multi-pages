@@ -1,0 +1,6 @@
+{
+  "title": "使用 Webpack 开发多页面站点",
+  "description": "最近我厂官网改版，我尝试用 Webpack 重建了开发工具链，效果不错，配置代码少了很多，逻辑更加简单清晰。我觉得值得拿出来分享一下。",
+  "language": "zh",
+  "author": "Meathill <meathill@gmail.com>"
+}

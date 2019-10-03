@@ -1,0 +1,617 @@
+
+<!DOCTYPE HTML>
+<html lang="zh" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>常见问题 · 使用 Webpack 开发多页面站点</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="Meathill <meathill@gmail.com>">
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="appendix.html" />
+    
+    
+    <link rel="prev" href="create-plugin.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="輸入並搜尋" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    前言
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="intro.html">
+            
+                <a href="intro.html">
+            
+                    
+                    项目介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="history.html">
+            
+                <a href="history.html">
+            
+                    
+                    切页面的历史
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="webpack-basic.html">
+            
+                <a href="webpack-basic.html">
+            
+                    
+                    Webpack 基础入门
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="webpack-multiple-pages.html">
+            
+                <a href="webpack-multiple-pages.html">
+            
+                    
+                    Webpack 多页配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="pug.html">
+            
+                <a href="pug.html">
+            
+                    
+                    Pug 介绍及架构
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="pug-i18n.html">
+            
+                <a href="pug-i18n.html">
+            
+                    
+                    使用 Pug 实现 i18n
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="stylus.html">
+            
+                <a href="stylus.html">
+            
+                    
+                    Stylus 及响应式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="optimization.html">
+            
+                <a href="optimization.html">
+            
+                    
+                    优化页面
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="create-plugin.html">
+            
+                <a href="create-plugin.html">
+            
+                    
+                    创建自己的插件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.11" data-path="faq.html">
+            
+                <a href="faq.html">
+            
+                    
+                    常见问题
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="appendix.html">
+            
+                <a href="appendix.html">
+            
+                    
+                    附录
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本書使用 GitBook 釋出
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >常见问题</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="&#x603B;&#x7ED3;">&#x603B;&#x7ED3;</h1>
+<p>&#x81F3;&#x6B64;&#xFF0C;&#x5173;&#x4E8E;&#x672C;&#x6B21;&#x5B98;&#x7F51;&#x6539;&#x7248;&#x7684;&#x6280;&#x672F;&#x5206;&#x4EAB;&#x57FA;&#x672C;&#x544A;&#x4E00;&#x6BB5;&#x843D;&#xFF0C;&#x6211;&#x57FA;&#x672C;&#x4E0A;&#x5206;&#x4EAB;&#x4E86;&#x6211;&#x672C;&#x9879;&#x76EE;&#x7684;&#x6240;&#x6709;&#x6536;&#x83B7;&#x3002;&#x8FD9;&#x91CC;&#x518D;&#x603B;&#x7ED3;&#x4E00;&#x4E0B;&#xFF1A;</p>
+<ol>
+<li>&#x4F7F;&#x7528; Webpack &#x6253;&#x5305;</li>
+<li>&#x4F7F;&#x7528;&#x591A;&#x4E2A; html-wepback-plugin &#x8F93;&#x51FA;&#x591A; HTML &#x9875;&#x9762;</li>
+<li>&#x4F7F;&#x7528; Pug &#x5199;&#x6A21;&#x677F;</li>
+<li>&#x5229;&#x7528; Pug &#x652F;&#x6301;&#x5185;&#x5EFA;&#x51FD;&#x6570;&#x7684;&#x65B9;&#x5F0F;&#x5B9E;&#x73B0; i18n</li>
+<li>&#x4F7F;&#x7528; Stylus &#x5199;&#x6837;&#x5F0F;</li>
+<li>&#x57FA;&#x4E8E; Bootstrap &#x7684;&#x5E03;&#x5C40;&#x7CFB;&#x7EDF;&#x5B8C;&#x6210;&#x54CD;&#x5E94;&#x5F0F;</li>
+<li>&#x5229;&#x7528; Chrome &#x5185;&#x5EFA;&#x7684; Audit &#x5DE5;&#x5177;&#x68C0;&#x67E5;&#x7F51;&#x7AD9;&#xFF0C;&#x5E76;&#x4FEE;&#x590D;&#x5176;&#x4E2D;&#x4E0D;&#x597D;&#x7684;&#x5730;&#x65B9;</li>
+<li>&#x5229;&#x7528; html-webpack-plugin &#x7684;&#x94A9;&#x5B50;&#x5F00;&#x53D1;&#x63D2;&#x4EF6;&#xFF0C;&#x5229;&#x7528;&#x6D4F;&#x89C8;&#x5668;&#x65B0;&#x7279;&#x6027;&#x3002;</li>
+</ol>
+<h1 id="&#x5E38;&#x89C1;&#x95EE;&#x9898;">&#x5E38;&#x89C1;&#x95EE;&#x9898;</h1>
+<h2 id="webapck-&#x5E94;&#x8BE5;&#x88C5;&#x5728;&#x54EA;&#x513F;&#xFF1F;">Webapck &#x5E94;&#x8BE5;&#x88C5;&#x5728;&#x54EA;&#x513F;&#xFF1F;</h2>
+<p>&#x7B54;&#xFF1A;&#x9879;&#x76EE;&#x4E2D;&#x76F4;&#x63A5;&#x4F7F;&#x7528; Webpack &#x7684;&#x673A;&#x4F1A;&#x4E0D;&#x591A;&#xFF0C;&#x6240;&#x4EE5;&#x5168;&#x5C40;&#x5B89;&#x88C5;&#x4E5F;&#x53EF;&#x4EE5;&#xFF0C;&#x800C;&#x4E14;&#x6BD4;&#x8F83;&#x7701;&#x786C;&#x76D8;&#x3002;&#x4E0D;&#x8FC7;&#x6211;&#x8FD8;&#x662F;&#x5EFA;&#x8BAE;&#x5927;&#x5BB6;&#x88C5;&#x5728;&#x9879;&#x76EE;&#x672C;&#x5730;&#xFF0C;&#x8FD9;&#x6837;&#x4E0D;&#x540C;&#x7684;&#x9879;&#x76EE;&#x5982;&#x679C;&#x4F9D;&#x8D56;&#x4E0D;&#x540C;&#x7684;&#x5DE5;&#x5177;&#x94FE;&#xFF0C;&#x6BD4;&#x8F83;&#x65B9;&#x4FBF;&#x5171;&#x5B58;&#x3002;</p>
+<h2 id="&#x80FD;&#x770B;&#x4E0B;&#x771F;&#x5B9E;&#x9879;&#x76EE;&#x4E48;&#xFF1F;">&#x80FD;&#x770B;&#x4E0B;&#x771F;&#x5B9E;&#x9879;&#x76EE;&#x4E48;&#xFF1F;</h2>
+<p>&#x7B54;&#xFF1A;&#x9879;&#x76EE;&#x672C;&#x8EAB;&#x5C5E;&#x4E8E;&#x6211;&#x5382;&#xFF0C;&#x4E1A;&#x52A1;&#x4EE3;&#x7801;&#x4E0D;&#x4FBF;&#x516C;&#x5F00;&#x3002;&#x8DDF;&#x672C;&#x6587;&#x76F8;&#x5173;&#x7684;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#xFF0C;&#x6211;&#x653E;&#x5728;&#x4E0B;&#x9762;&#xFF1A;</p>
+<p>webpack.config.js</p>
+<pre><code class="lang-js"><span class="hljs-keyword">const</span> path = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;path&apos;</span>);
+<span class="hljs-keyword">const</span> {promises: {readFile}, existsSync} = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;fs&apos;</span>);
+<span class="hljs-keyword">const</span> {DefinePlugin} = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;webpack&apos;</span>);
+<span class="hljs-keyword">const</span> HtmlWebpackPlugin = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;html-webpack-plugin&apos;</span>);
+<span class="hljs-keyword">const</span> po2json = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;po2json&apos;</span>);
+<span class="hljs-keyword">const</span> VueLoaderPlugin = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;vue-loader/lib/plugin&apos;</span>);
+<span class="hljs-keyword">const</span> {isArray, isString} = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;lodash&apos;</span>);
+<span class="hljs-keyword">const</span> DEV = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;../config/dev&apos;</span>);
+
+<span class="hljs-comment">/* global __dirname */</span>
+<span class="hljs-keyword">const</span> devMode = process.env.NODE_ENV !== <span class="hljs-string">&apos;production&apos;</span>;
+<span class="hljs-keyword">const</span> lang = process.env.TARGET_LANG || <span class="hljs-string">&apos;en&apos;</span>;
+<span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;Current mode: &apos;</span>, devMode ? <span class="hljs-string">&apos;Development&apos;</span> : <span class="hljs-string">&apos;Production&apos;</span>);
+<span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;Current language: &apos;</span>, lang);
+<span class="hljs-keyword">const</span> destDir = path.resolve(__dirname, <span class="hljs-string">`../../<span class="hljs-subst">${lang}</span>`</span>);
+
+<span class="hljs-keyword">const</span> translation = <span class="hljs-built_in">require</span>(<span class="hljs-string">`../lang/<span class="hljs-subst">${lang}</span>`</span>);
+<span class="hljs-keyword">let</span> po;
+
+global.__ = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">value</span>) </span>{
+  <span class="hljs-keyword">if</span> (!po || !po[value]) {
+    <span class="hljs-keyword">return</span> value;
+  }
+  <span class="hljs-keyword">let</span> translation = po[value];
+  translation = isArray(translation) ? translation.join(<span class="hljs-string">&apos;&apos;</span>) : translation;
+  <span class="hljs-keyword">return</span> translation || value;
+};
+
+<span class="hljs-keyword">const</span> config = {
+  context: path.resolve(__dirname, <span class="hljs-string">&apos;../js&apos;</span>),
+  entry: {
+    index: <span class="hljs-string">&apos;./index.js&apos;</span>,
+    edge: <span class="hljs-string">&apos;./edge&apos;</span>,
+    about: <span class="hljs-string">&apos;./about.js&apos;</span>,
+    comparison: <span class="hljs-string">&apos;./about.js&apos;</span>,
+    contact: <span class="hljs-string">&apos;./about.js&apos;</span>,
+    forget: <span class="hljs-string">&apos;./forget.js&apos;</span>,
+    login: <span class="hljs-string">&apos;./login.js&apos;</span>,
+    logout: <span class="hljs-string">&apos;./logout.js&apos;</span>,
+    price: <span class="hljs-string">&apos;./price.js&apos;</span>,
+    profile: <span class="hljs-string">&apos;./profile.js&apos;</span>,
+    register: <span class="hljs-string">&apos;./register.js&apos;</span>,
+    reset: <span class="hljs-string">&apos;./reset.js&apos;</span>,
+    trial: <span class="hljs-string">&apos;./trial.js&apos;</span>,
+    verify: <span class="hljs-string">&apos;./verify.js&apos;</span>,
+  },
+  output: {
+    path: destDir,
+    filename: <span class="hljs-string">&apos;[name].js&apos;</span>,
+    publicPath: devMode ? <span class="hljs-string">&apos;/&apos;</span> : <span class="hljs-string">`/<span class="hljs-subst">${lang}</span>/`</span>,
+  },
+  <span class="hljs-built_in">module</span>: {
+    rules: [
+      {
+        test: <span class="hljs-regexp">/\.js$/</span>,
+        loader: <span class="hljs-string">&apos;babel-loader&apos;</span>,
+        exclude: <span class="hljs-regexp">/node_modules/</span>,
+      },
+      {
+        test: <span class="hljs-regexp">/\.vue$/</span>,
+        loader: <span class="hljs-string">&apos;vue-loader&apos;</span>,
+      },
+      {
+        test: <span class="hljs-regexp">/(pages|template)\/[a-zA-Z0-9-]+\.pug$/</span>,
+        loader: <span class="hljs-string">&apos;pug-loader&apos;</span>,
+      },
+      {
+        test: <span class="hljs-regexp">/\.pug$/</span>,
+        loader: <span class="hljs-string">&apos;pug-plain-loader&apos;</span>,
+        exclude: <span class="hljs-regexp">/(pages|template)\//</span>,
+      },
+      {
+        test: <span class="hljs-regexp">/\.styl(us)?$/</span>,
+        use: [
+          <span class="hljs-string">&apos;style-loader&apos;</span>,
+          <span class="hljs-string">&apos;css-loader&apos;</span>,
+          <span class="hljs-string">&apos;stylus-loader&apos;</span>,
+        ],
+      },
+      {
+        test: <span class="hljs-regexp">/\.(png|jpg|gif|svg|woff2|eot|woff|ttf|ico)$/</span>,
+        use: [
+          {
+            loader: <span class="hljs-string">&apos;file-loader&apos;</span>,
+            options: {
+              name: <span class="hljs-string">&apos;[name].[ext]&apos;</span>,
+              outputPath: <span class="hljs-string">&apos;assets&apos;</span>,
+              publicPath: devMode ? <span class="hljs-string">&apos;/assets&apos;</span> : <span class="hljs-string">`/<span class="hljs-subst">${lang}</span>/assets`</span>,
+            },
+          },
+        ],
+      },
+    ],
+  },
+  devtool: <span class="hljs-string">&apos;source-map&apos;</span>,
+  mode: <span class="hljs-string">&apos;development&apos;</span>,
+  resolve: {
+    extensions: [<span class="hljs-string">&apos;.js&apos;</span>, <span class="hljs-string">&apos;.json&apos;</span>, <span class="hljs-string">&apos;.vue&apos;</span>],
+  },
+  plugins: [
+    <span class="hljs-keyword">new</span> DefinePlugin(DEV),
+    <span class="hljs-keyword">new</span> VueLoaderPlugin(),
+  ],
+  externals: {
+    <span class="hljs-string">&apos;swiper&apos;</span>: <span class="hljs-string">&apos;Swiper&apos;</span>,
+    <span class="hljs-string">&apos;mediaelement&apos;</span>: <span class="hljs-string">&apos;MediaElementPlayer&apos;</span>,
+    <span class="hljs-string">&apos;jquery&apos;</span>: <span class="hljs-string">&apos;jQuery&apos;</span>,
+    <span class="hljs-string">&apos;vue&apos;</span>: <span class="hljs-string">&apos;Vue&apos;</span>,
+    <span class="hljs-string">&apos;axios&apos;</span>: <span class="hljs-string">&apos;axios&apos;</span>,
+  },
+  devServer: {
+    port: <span class="hljs-number">8080</span>,
+  },
+};
+
+<span class="hljs-keyword">const</span> pages = <span class="hljs-built_in">Object</span>.keys(config.entry);
+config.plugins = config.plugins.concat(pages.map(page =&gt; {
+  <span class="hljs-keyword">return</span> <span class="hljs-keyword">new</span> HtmlWebpackPlugin({
+    filename: page === <span class="hljs-string">&apos;index&apos;</span> ? <span class="hljs-string">`<span class="hljs-subst">${page}</span>.html`</span> : <span class="hljs-string">`<span class="hljs-subst">${page}</span>/index.html`</span>,
+    template: path.resolve(__dirname, <span class="hljs-string">`../pages/<span class="hljs-subst">${page}</span>.pug`</span>),
+    chunks: [page],
+    templateParameters: {
+      ...translation,
+      lang,
+      page,
+      devMode,
+    },
+  });
+}));
+
+<span class="hljs-built_in">module</span>.exports = <span class="hljs-built_in">Promise</span>.resolve()
+  .then(() =&gt; {
+    <span class="hljs-keyword">const</span> poPath = path.resolve(__dirname, <span class="hljs-string">`../lang/<span class="hljs-subst">${lang}</span>.po`</span>);
+    <span class="hljs-keyword">if</span> (!existsSync(poPath)) {
+      <span class="hljs-keyword">return</span> <span class="hljs-built_in">Promise</span>.reject(<span class="hljs-string">&apos;PO file not founded.&apos;</span>);
+    }
+
+    <span class="hljs-keyword">return</span> readFile(poPath, <span class="hljs-string">&apos;utf8&apos;</span>);
+  })
+  .then(poData =&gt; {
+    po = po2json.parse(poData);
+  })
+  .catch(error =&gt; {
+    <span class="hljs-keyword">if</span> (isString(error)) {
+      <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;[Log]&apos;</span>, error);
+      <span class="hljs-keyword">return</span>;
+    }
+    <span class="hljs-keyword">throw</span> error;
+  })
+  .then(() =&gt; {
+    <span class="hljs-keyword">return</span> config;
+  });
+</code></pre>
+<p>webpack.config.i18n.js</p>
+<pre><code class="lang-js"><span class="hljs-keyword">const</span> path = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;path&apos;</span>);
+<span class="hljs-keyword">const</span> {cloneDeep} = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;lodash&apos;</span>);
+<span class="hljs-keyword">let</span> config = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;./webpack.config&apos;</span>);
+
+<span class="hljs-comment">/* global __dirname */</span>
+
+<span class="hljs-built_in">module</span>.exports = config
+  .then(config =&gt; {
+    config = cloneDeep(config);
+    config.output.path = path.resolve(__dirname, <span class="hljs-string">&apos;../tmp/&apos;</span>);
+    <span class="hljs-keyword">return</span> config;
+  });
+</code></pre>
+<p>webpack.config.prod.js</p>
+<pre><code class="lang-js"><span class="hljs-keyword">const</span> {defaults} = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;lodash&apos;</span>);
+<span class="hljs-keyword">const</span> {DefinePlugin} = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;webpack&apos;</span>);
+<span class="hljs-keyword">const</span> TerserPlugin = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;terser-webpack-plugin&apos;</span>);
+<span class="hljs-keyword">const</span> MiniCssExtractPlugin = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;mini-css-extract-plugin&apos;</span>);
+<span class="hljs-keyword">const</span> OptimizeCSSAssetsPlugin = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;optimize-css-assets-webpack-plugin&apos;</span>);
+<span class="hljs-keyword">const</span> {CleanWebpackPlugin} = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;clean-webpack-plugin&apos;</span>);
+<span class="hljs-keyword">const</span> LazyLoadPlugin = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;./lazyload&apos;</span>);
+
+<span class="hljs-keyword">const</span> base = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;./webpack.config&apos;</span>);
+<span class="hljs-keyword">const</span> config = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;../config/prod&apos;</span>);
+
+<span class="hljs-comment">/* global __dirname */</span>
+
+<span class="hljs-built_in">module</span>.exports = base.then(base =&gt; {
+  base.plugins[<span class="hljs-number">0</span>] = <span class="hljs-keyword">new</span> DefinePlugin(config);
+  <span class="hljs-keyword">return</span> defaults({
+    mode: <span class="hljs-string">&apos;production&apos;</span>,
+    devtool: <span class="hljs-literal">false</span>,
+
+    <span class="hljs-built_in">module</span>: {
+      rules: base.module.rules.map(rule =&gt; {
+        <span class="hljs-keyword">if</span> (!rule.test.test(<span class="hljs-string">&apos;a.styl&apos;</span>)) {
+          <span class="hljs-keyword">return</span> rule;
+        }
+        rule.use[<span class="hljs-number">0</span>] = MiniCssExtractPlugin.loader;
+        <span class="hljs-keyword">return</span> rule;
+      }),
+    },
+
+    plugins: [<span class="hljs-keyword">new</span> CleanWebpackPlugin()].concat(
+      base.plugins,
+      [
+        <span class="hljs-keyword">new</span> MiniCssExtractPlugin({
+          filename: <span class="hljs-string">&apos;screen.css&apos;</span>,
+        }),
+        <span class="hljs-keyword">new</span> LazyLoadPlugin(),
+      ]
+    ),
+
+    optimization: {
+      minimizer: [
+        <span class="hljs-keyword">new</span> OptimizeCSSAssetsPlugin(),
+        <span class="hljs-keyword">new</span> TerserPlugin({
+          cache: <span class="hljs-literal">true</span>,
+          parallel: <span class="hljs-literal">true</span>,
+          exclude: <span class="hljs-regexp">/node_modules/</span>,
+          terserOptions: {
+            ecma: <span class="hljs-number">7</span>,
+            toplevel: <span class="hljs-literal">true</span>,
+            compress: {
+              drop_console: <span class="hljs-literal">true</span>,
+            },
+          },
+        }),
+      ],
+    },
+  }, base);
+});
+</code></pre>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="create-plugin.html" class="navigation navigation-prev " aria-label="Previous page: 创建自己的插件">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="appendix.html" class="navigation navigation-next " aria-label="Next page: 附录">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"常见问题","level":"1.11","depth":1,"next":{"title":"附录","level":"1.12","depth":1,"path":"appendix.md","ref":"appendix.md","articles":[]},"previous":{"title":"创建自己的插件","level":"1.10","depth":1,"path":"create-plugin.md","ref":"create-plugin.md","articles":[]},"dir":"ltr"},"config":{"plugins":[],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Meathill <meathill@gmail.com>","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"使用 Webpack 开发多页面站点","language":"zh","gitbook":"*","description":"最近我厂官网改版，我尝试用 Webpack 重建了开发工具链，效果不错，配置代码少了很多，逻辑更加简单清晰。我觉得值得拿出来分享一下。"},"file":{"path":"faq.md","mtime":"2019-09-15T12:42:37.762Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-10-03T09:15:06.018Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
